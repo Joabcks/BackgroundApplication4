@@ -57,7 +57,7 @@ namespace BackgroundApplication4
 
         public void EnviaDados()
         {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create($"https://api.thingspeak.com/update?api_key=D3X4B8IT0PVBCQR3&field1="+ rxBuffer +""); // campo após "field1=" deve receber a variavel que irá receber os dados
+             var httpWebRequest = (HttpWebRequest)WebRequest.Create($"https://api.thingspeak.com/update?api_key=D3X4B8IT0PVBCQR3&field1={rxBuffer}"); // campo após "field1=" deve receber a variavel que irá receber os dados
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "GET";
             var dataE = httpWebRequest.GetRequestStreamAsync();
